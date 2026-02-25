@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { StyleSheet, ImageBackground } from "react-native";
+import { StyleSheet, ImageBackground, StatusBar } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 
 import { LinearGradient } from "expo-linear-gradient";
@@ -37,12 +37,12 @@ const App = () => {
 
   const gameOverHandler = (numberOfRounds) => {
     setGameIsOver(true);
-    setGuessRounds(numberOfRounds)
+    setGuessRounds(numberOfRounds);
   };
 
   const startNewGameHandler = () => {
     setUserNumber(null);
-    setGuessRounds(0)
+    setGuessRounds(0);
   };
 
   const pickedNumberHandler = (pickedNumber) => {
@@ -69,21 +69,24 @@ const App = () => {
   }
 
   return (
-    <LinearGradient
-      colors={[Colors.primary500, Colors.accent500]}
-      style={styles.rootScreen}
-    >
-      <ImageBackground
-        source={require("./assets/images/background.png")}
+    <>
+    <StatusBar style="light" />
+      <LinearGradient
+        colors={[Colors.primary500, Colors.accent500]}
         style={styles.rootScreen}
-        resizeMode="cover"
-        imageStyle={styles.backgroundImage}
       >
-        <SafeAreaProvider>
-          <SafeAreaView style={styles.rootScreen}>{screen}</SafeAreaView>
-        </SafeAreaProvider>
-      </ImageBackground>
-    </LinearGradient>
+        <ImageBackground
+          source={require("./assets/images/background.png")}
+          style={styles.rootScreen}
+          resizeMode="cover"
+          imageStyle={styles.backgroundImage}
+        >
+          <SafeAreaProvider>
+            <SafeAreaView style={styles.rootScreen}>{screen}</SafeAreaView>
+          </SafeAreaProvider>
+        </ImageBackground>
+      </LinearGradient>
+    </>
   );
 };
 
