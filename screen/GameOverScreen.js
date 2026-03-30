@@ -56,7 +56,7 @@ export default GameOverScreen;
 
 const styles = StyleSheet.create({
   screen: {
-    flex:1
+    flex: 1,
   },
   rootContainer: {
     flex: 1,

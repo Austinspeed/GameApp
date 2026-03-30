@@ -175,8 +175,8 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   buttonsContainerWide: {
-    flexDirection: 'row',
-    alignItems:'center'
+    flexDirection: "row",
+    alignItems: "center",
   },
   listContainer: {
     flex: 1,

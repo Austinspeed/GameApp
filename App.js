@@ -70,7 +70,7 @@ const App = () => {
 
   return (
     <>
-    <StatusBar style="light" />
+      <StatusBar style="light" />
       <LinearGradient
         colors={[Colors.primary500, Colors.accent500]}
         style={styles.rootScreen}
